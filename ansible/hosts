@@ -1,0 +1,14 @@
+all:
+    hosts:
+        enter_one
+    vars:
+        repo_url: git@github.com:Kay-Wilkinson/ansible-deployment-test.git
+        repo: ansible-deployment-test
+        home_dir: /home/ubuntu
+        repo_dir: "{{ home_dir }}/{{ repo }}"
+        django_dir: "{{ repo_dir }}/django"
+        static_dir: "{{ home_dir }}/static"
+        django_project: enter_one
+        dbname: enter_one_db
+        dbuser: enter_one_db_user
+        dbpassword: "{{ lookup('password', 'postgresqlpasswd') }}"
